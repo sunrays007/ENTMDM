@@ -7,6 +7,29 @@
                 <h2 data-translate="entmdmApp.pharmacustomer.home.title">Pharmacustomers</h2>
             </div>
 
+            <div class="col-sm-5 text-right p-n">
+                <form name="searchForm" class="form-inline">
+                    <div class="form-group m-n">
+                        <input type="search" class="form-control" ng-model="vm.searchQuery" id="searchQuery"
+                               placeholder="{{'entmdmApp.pharmacustomer.home.search' | translate}}">
+                    </div>
+                    <button class="btn btn-info btn-sm" ng-click="vm.clear()" ng-if="vm.currentSearch"
+                            uib-tooltip="{{'entmdmApp.pharmacustomer.home.clear' | translate}}">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                    <button class="btn btn-info btn-sm btn-raised" ng-click=
+                        "vm.search(vm.searchQuery)"
+                            uib-tooltip="{{'entmdmApp.pharmacustomer.home.search' | translate}}">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                    <button class="btn btn-primary btn-sm btn-raised" ui-sref="pharmacustomer.new"
+                            uib-tooltip="{{'entmdmApp.pharmacustomer.home.createLabel' | translate}}">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+                </form>
+            </div>
+
+            <!--
             <div class="col-xs-4 no-padding-left">
                 <button class="btn btn-primary" ui-sref="pharmacustomer.new" >
                     <span class="glyphicon glyphicon-plus"></span>
@@ -15,6 +38,7 @@
                     </span>
                 </button>
             </div>
+
             <div class="col-xs-8 no-padding-right">
                 <form name="searchForm" class="form-inline">
                     <div class="input-group pull-right" >
@@ -32,14 +56,19 @@
                     </div>
                 </form>
             </div>
+-->
+
         </div>
     </div>
+
     <br/>
     <div class="table-responsive">
         <table class="jh-table table table-striped">
             <thead>
                 <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.reset()">
+                   <!--
                     <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    -->
                     <th jh-sort-by="pharmacustomernr"><span data-translate="entmdmApp.pharmacustomer.pharmacustomernr">Pharmacustomernr</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="address"><span data-translate="entmdmApp.pharmacustomer.address">Address</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="city"><span data-translate="entmdmApp.pharmacustomer.city">City</span> <span class="glyphicon glyphicon-sort"></span></th>
@@ -54,18 +83,58 @@
             </thead>
             <tbody infinite-scroll="vm.loadPage(vm.page + 1)" infinite-scroll-disabled="vm.page >= vm.links['last']">
                 <tr ng-repeat="pharmacustomer in vm.pharmacustomers track by pharmacustomer.id">
-                    <td><a ui-sref="pharmacustomer-detail({id:pharmacustomer.id})">{{pharmacustomer.id}}</a></td>
+                    <!--
+                    <td><a ui-sref="pharmacustomer-detail({id:pharmacustomer.id})">{{pharmacustomer.id}}</a></td>--
+                    -->
+
                     <td>{{pharmacustomer.pharmacustomernr}}</td>
                     <td>{{pharmacustomer.address}}</td>
                     <td>{{pharmacustomer.city}}</td>
                     <td>{{pharmacustomer.state}}</td>
                     <td>{{pharmacustomer.zipcode}}</td>
                     <td>{{pharmacustomer.country}}</td>
+
+                    <td class="text-center">
+                        <i class="glyphicon" ng-class="{'glyphicon-ok text-success': pharmacustomer.pharmashipto,
+                                                        'glyphicon-remove text-danger': !pharmacustomer.pharmashipto}"></i>
+                    </td>
+
+                    <td class="text-center">
+                        <i class="glyphicon" ng-class="{'glyphicon-ok text-success': pharmacustomer.pharmabillto,
+                                                        'glyphicon-remove text-danger': !pharmacustomer.pharmabillto}"></i>
+                    </td>
+
+
+                    <!--
                     <td>{{pharmacustomer.pharmashipto}}</td>
+
+
                     <td>{{pharmacustomer.pharmabillto}}</td>
+                    -->
+
+
                     <td>{{pharmacustomer.dealicensenr}}</td>
+
                     <td class="text-right">
-                        <div class="btn-group flex-btn-group-container">
+                        <div class="btn-group btn-group-raised m-n">
+
+                            <button type="submit" uib-tooltip="{{'entity.action.view' | translate}}"
+                                    ui-sref="pharmacustomer-detail({id:pharmacustomer.id})"
+                                    class="btn btn-info btn-xs">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                            </button>
+                            <button type="submit" uib-tooltip="{{'entity.action.edit' | translate}}"
+                                    ui-sref="pharmacustomer.edit({id:pharmacustomer.id})"
+                                    class="btn btn-primary btn-xs">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </button>
+                            <button type="submit" uib-tooltip="{{'entity.action.delete' | translate}}"
+                                    ui-sref="pharmacustomer.delete({id:pharmacustomer.id})"
+                                    class="btn btn-danger btn-xs">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                            </button>
+
+                            <!--
                             <button type="submit"
                                     ui-sref="pharmacustomer-detail({id:pharmacustomer.id})"
                                     class="btn btn-info btn-sm">
@@ -84,6 +153,8 @@
                                 <span class="glyphicon glyphicon-remove-circle"></span>
                                 <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
                             </button>
+
+                            -->
                         </div>
                     </td>
                 </tr>
