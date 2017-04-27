@@ -1,0 +1,34 @@
+{
+    "entmdmApp": {
+        "enterprisecustomer" : {
+            "home": {
+                "title": "Enterprisecustomers",
+                "createLabel": "Create a new Enterprisecustomer",
+                "createOrEditLabel": "Create or edit a Enterprisecustomer",
+                "search": "Search for Enterprisecustomer"
+            },
+            "created": "A new Enterprisecustomer is created with identifier {{ param }}",
+            "updated": "A Enterprisecustomer is updated with identifier {{ param }}",
+            "deleted": "A Enterprisecustomer is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Enterprisecustomer {{ id }}?"
+            },
+            "detail": {
+                "title": "Enterprisecustomer"
+            },
+            "enterprisecustomernr": "Enterprisecustomernr",
+            "pharmaacctnr": "Pharmaacctnr",
+            "medicalacctnr": "Medicalacctnr",
+            "address": "Address",
+            "city": "City",
+            "state": "State",
+            "zipcode": "Zipcode",
+            "country": "Country",
+            "pharmaShipTo": "Pharma Ship To",
+            "pharmabillto": "Pharmabillto",
+            "medicalshipto": "Medicalshipto",
+            "dealicensenr": "Dealicensenr",
+            "healthfacilitylicensenr": "Healthfacilitylicensenr"
+        }
+    }
+}

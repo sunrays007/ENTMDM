@@ -1,0 +1,71 @@
+
+<div>
+    <h2><span data-translate="entmdmApp.enterprisecustomer.detail.title">Enterprisecustomer</span> {{vm.enterprisecustomer.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="entmdmApp.enterprisecustomer.enterprisecustomernr">Enterprisecustomernr</span></dt>
+        <dd>
+            <span>{{vm.enterprisecustomer.enterprisecustomernr}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.enterprisecustomer.pharmaacctnr">Pharmaacctnr</span></dt>
+        <dd>
+            <span>{{vm.enterprisecustomer.pharmaacctnr}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.enterprisecustomer.medicalacctnr">Medicalacctnr</span></dt>
+        <dd>
+            <span>{{vm.enterprisecustomer.medicalacctnr}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.enterprisecustomer.address">Address</span></dt>
+        <dd>
+            <span>{{vm.enterprisecustomer.address}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.enterprisecustomer.city">City</span></dt>
+        <dd>
+            <span>{{vm.enterprisecustomer.city}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.enterprisecustomer.state">State</span></dt>
+        <dd>
+            <span>{{vm.enterprisecustomer.state}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.enterprisecustomer.zipcode">Zipcode</span></dt>
+        <dd>
+            <span>{{vm.enterprisecustomer.zipcode}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.enterprisecustomer.country">Country</span></dt>
+        <dd>
+            <span>{{vm.enterprisecustomer.country}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.enterprisecustomer.pharmaShipTo">Pharma Ship To</span></dt>
+        <dd>
+            <span>{{vm.enterprisecustomer.pharmaShipTo}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.enterprisecustomer.pharmabillto">Pharmabillto</span></dt>
+        <dd>
+            <span>{{vm.enterprisecustomer.pharmabillto}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.enterprisecustomer.medicalshipto">Medicalshipto</span></dt>
+        <dd>
+            <span>{{vm.enterprisecustomer.medicalshipto}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.enterprisecustomer.dealicensenr">Dealicensenr</span></dt>
+        <dd>
+            <span>{{vm.enterprisecustomer.dealicensenr}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.enterprisecustomer.healthfacilitylicensenr">Healthfacilitylicensenr</span></dt>
+        <dd>
+            <span>{{vm.enterprisecustomer.healthfacilitylicensenr}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="enterprisecustomer-detail.edit({id:vm.enterprisecustomer.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

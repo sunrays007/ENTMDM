@@ -1,0 +1,184 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myEnterprisecustomerLabel" data-translate="entmdmApp.enterprisecustomer.home.createOrEditLabel">Create or edit a Enterprisecustomer</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.enterprisecustomer.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.enterprisecustomer.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.enterprisecustomer.enterprisecustomernr" for="field_enterprisecustomernr">Enterprisecustomernr</label>
+            <input type="text" class="form-control" name="enterprisecustomernr" id="field_enterprisecustomernr"
+                    ng-model="vm.enterprisecustomer.enterprisecustomernr"
+                    required ng-maxlength="10"/>
+            <div ng-show="editForm.enterprisecustomernr.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.enterprisecustomernr.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.enterprisecustomernr.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="10">
+                    This field cannot be longer than 10 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.enterprisecustomer.pharmaacctnr" for="field_pharmaacctnr">Pharmaacctnr</label>
+            <input type="text" class="form-control" name="pharmaacctnr" id="field_pharmaacctnr"
+                    ng-model="vm.enterprisecustomer.pharmaacctnr"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.enterprisecustomer.medicalacctnr" for="field_medicalacctnr">Medicalacctnr</label>
+            <input type="text" class="form-control" name="medicalacctnr" id="field_medicalacctnr"
+                    ng-model="vm.enterprisecustomer.medicalacctnr"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.enterprisecustomer.address" for="field_address">Address</label>
+            <input type="text" class="form-control" name="address" id="field_address"
+                    ng-model="vm.enterprisecustomer.address"
+                    required/>
+            <div ng-show="editForm.address.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.address.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.enterprisecustomer.city" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                    ng-model="vm.enterprisecustomer.city"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.enterprisecustomer.state" for="field_state">State</label>
+            <input type="text" class="form-control" name="state" id="field_state"
+                    ng-model="vm.enterprisecustomer.state"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.enterprisecustomer.zipcode" for="field_zipcode">Zipcode</label>
+            <input type="number" class="form-control" name="zipcode" id="field_zipcode"
+                    ng-model="vm.enterprisecustomer.zipcode"
+                    max="99999"/>
+            <div ng-show="editForm.zipcode.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.zipcode.$error.max" data-translate="entity.validation.max" translate-value-max="99999">
+                    This field cannot be more than 99999.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.zipcode.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.enterprisecustomer.country" for="field_country">Country</label>
+            <input type="text" class="form-control" name="country" id="field_country"
+                    ng-model="vm.enterprisecustomer.country"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.enterprisecustomer.pharmaShipTo" for="field_pharmaShipTo">Pharma Ship To</label>
+            <input type="number" class="form-control" name="pharmaShipTo" id="field_pharmaShipTo"
+                    ng-model="vm.enterprisecustomer.pharmaShipTo"
+                    required min="0" max="1"/>
+            <div ng-show="editForm.pharmaShipTo.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.pharmaShipTo.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.pharmaShipTo.$error.min" data-translate="entity.validation.min" translate-value-min="0">
+                    This field should be at least 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.pharmaShipTo.$error.max" data-translate="entity.validation.max" translate-value-max="1">
+                    This field cannot be more than 1.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.pharmaShipTo.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.enterprisecustomer.pharmabillto" for="field_pharmabillto">Pharmabillto</label>
+            <input type="number" class="form-control" name="pharmabillto" id="field_pharmabillto"
+                    ng-model="vm.enterprisecustomer.pharmabillto"
+                    required min="0" max="1"/>
+            <div ng-show="editForm.pharmabillto.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.pharmabillto.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.pharmabillto.$error.min" data-translate="entity.validation.min" translate-value-min="0">
+                    This field should be at least 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.pharmabillto.$error.max" data-translate="entity.validation.max" translate-value-max="1">
+                    This field cannot be more than 1.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.pharmabillto.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.enterprisecustomer.medicalshipto" for="field_medicalshipto">Medicalshipto</label>
+            <input type="number" class="form-control" name="medicalshipto" id="field_medicalshipto"
+                    ng-model="vm.enterprisecustomer.medicalshipto"
+                    required min="0" max="1"/>
+            <div ng-show="editForm.medicalshipto.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.medicalshipto.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.medicalshipto.$error.min" data-translate="entity.validation.min" translate-value-min="0">
+                    This field should be at least 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.medicalshipto.$error.max" data-translate="entity.validation.max" translate-value-max="1">
+                    This field cannot be more than 1.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.medicalshipto.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.enterprisecustomer.dealicensenr" for="field_dealicensenr">Dealicensenr</label>
+            <input type="text" class="form-control" name="dealicensenr" id="field_dealicensenr"
+                    ng-model="vm.enterprisecustomer.dealicensenr"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.enterprisecustomer.healthfacilitylicensenr" for="field_healthfacilitylicensenr">Healthfacilitylicensenr</label>
+            <input type="text" class="form-control" name="healthfacilitylicensenr" id="field_healthfacilitylicensenr"
+                    ng-model="vm.enterprisecustomer.healthfacilitylicensenr"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

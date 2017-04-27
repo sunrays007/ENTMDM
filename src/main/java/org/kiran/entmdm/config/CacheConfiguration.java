@@ -42,6 +42,7 @@ public class CacheConfiguration {
             cm.createCache(org.kiran.entmdm.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(org.kiran.entmdm.domain.Pharmacustomer.class.getName(), jcacheConfiguration);
             cm.createCache(org.kiran.entmdm.domain.Medicalcustomer.class.getName(), jcacheConfiguration);
+            cm.createCache(org.kiran.entmdm.domain.Enterprisecustomer.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

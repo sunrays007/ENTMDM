@@ -1,0 +1,96 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "enterprisecustomernr",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "10"
+        },
+        {
+            "fieldName": "pharmaacctnr",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "medicalacctnr",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "zipcode",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "max"
+            ],
+            "fieldValidateRulesMax": "99999"
+        },
+        {
+            "fieldName": "country",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pharmaShipTo",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": "0",
+            "fieldValidateRulesMax": "1"
+        },
+        {
+            "fieldName": "pharmabillto",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": "0",
+            "fieldValidateRulesMax": "1"
+        },
+        {
+            "fieldName": "medicalshipto",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": "0",
+            "fieldValidateRulesMax": "1"
+        },
+        {
+            "fieldName": "dealicensenr",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "healthfacilitylicensenr",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170427152510",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "enterprisecustomer",
+    "pagination": "infinite-scroll"
+}
