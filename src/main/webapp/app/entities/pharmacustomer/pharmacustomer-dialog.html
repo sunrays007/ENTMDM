@@ -1,0 +1,144 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPharmacustomerLabel" data-translate="entmdmApp.pharmacustomer.home.createOrEditLabel">Create or edit a Pharmacustomer</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.pharmacustomer.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.pharmacustomer.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.pharmacustomer.pharmacustomernr" for="field_pharmacustomernr">Pharmacustomernr</label>
+            <input type="text" class="form-control" name="pharmacustomernr" id="field_pharmacustomernr"
+                    ng-model="vm.pharmacustomer.pharmacustomernr"
+                    required ng-maxlength="10"/>
+            <div ng-show="editForm.pharmacustomernr.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.pharmacustomernr.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.pharmacustomernr.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="10">
+                    This field cannot be longer than 10 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.pharmacustomer.address" for="field_address">Address</label>
+            <input type="text" class="form-control" name="address" id="field_address"
+                    ng-model="vm.pharmacustomer.address"
+                    required ng-maxlength="200"/>
+            <div ng-show="editForm.address.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.address.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.address.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="200">
+                    This field cannot be longer than 200 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.pharmacustomer.city" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                    ng-model="vm.pharmacustomer.city"
+                    required ng-maxlength="100"/>
+            <div ng-show="editForm.city.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.city.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.city.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.pharmacustomer.state" for="field_state">State</label>
+            <input type="text" class="form-control" name="state" id="field_state"
+                    ng-model="vm.pharmacustomer.state"
+                    required ng-maxlength="100"/>
+            <div ng-show="editForm.state.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.state.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.state.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.pharmacustomer.zipcode" for="field_zipcode">Zipcode</label>
+            <input type="number" class="form-control" name="zipcode" id="field_zipcode"
+                    ng-model="vm.pharmacustomer.zipcode"
+                    required max="5"/>
+            <div ng-show="editForm.zipcode.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.zipcode.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.zipcode.$error.max" data-translate="entity.validation.max" translate-value-max="5">
+                    This field cannot be more than 5.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.zipcode.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.pharmacustomer.country" for="field_country">Country</label>
+            <input type="text" class="form-control" name="country" id="field_country"
+                    ng-model="vm.pharmacustomer.country"
+                    required ng-maxlength="100"/>
+            <div ng-show="editForm.country.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.country.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.country.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.pharmacustomer.pharmashipto" for="field_pharmashipto">Pharmashipto</label>
+            <input type="number" class="form-control" name="pharmashipto" id="field_pharmashipto"
+                    ng-model="vm.pharmacustomer.pharmashipto"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.pharmacustomer.pharmabillto" for="field_pharmabillto">Pharmabillto</label>
+            <input type="number" class="form-control" name="pharmabillto" id="field_pharmabillto"
+                    ng-model="vm.pharmacustomer.pharmabillto"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.pharmacustomer.dealicensenr" for="field_dealicensenr">Dealicensenr</label>
+            <input type="text" class="form-control" name="dealicensenr" id="field_dealicensenr"
+                    ng-model="vm.pharmacustomer.dealicensenr"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

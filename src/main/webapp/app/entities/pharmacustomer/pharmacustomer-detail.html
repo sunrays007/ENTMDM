@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span data-translate="entmdmApp.pharmacustomer.detail.title">Pharmacustomer</span> {{vm.pharmacustomer.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="entmdmApp.pharmacustomer.pharmacustomernr">Pharmacustomernr</span></dt>
+        <dd>
+            <span>{{vm.pharmacustomer.pharmacustomernr}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.pharmacustomer.address">Address</span></dt>
+        <dd>
+            <span>{{vm.pharmacustomer.address}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.pharmacustomer.city">City</span></dt>
+        <dd>
+            <span>{{vm.pharmacustomer.city}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.pharmacustomer.state">State</span></dt>
+        <dd>
+            <span>{{vm.pharmacustomer.state}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.pharmacustomer.zipcode">Zipcode</span></dt>
+        <dd>
+            <span>{{vm.pharmacustomer.zipcode}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.pharmacustomer.country">Country</span></dt>
+        <dd>
+            <span>{{vm.pharmacustomer.country}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.pharmacustomer.pharmashipto">Pharmashipto</span></dt>
+        <dd>
+            <span>{{vm.pharmacustomer.pharmashipto}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.pharmacustomer.pharmabillto">Pharmabillto</span></dt>
+        <dd>
+            <span>{{vm.pharmacustomer.pharmabillto}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.pharmacustomer.dealicensenr">Dealicensenr</span></dt>
+        <dd>
+            <span>{{vm.pharmacustomer.dealicensenr}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="pharmacustomer-detail.edit({id:vm.pharmacustomer.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

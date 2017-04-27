@@ -1,0 +1,30 @@
+{
+    "entmdmApp": {
+        "pharmacustomer" : {
+            "home": {
+                "title": "Pharmacustomers",
+                "createLabel": "Create a new Pharmacustomer",
+                "createOrEditLabel": "Create or edit a Pharmacustomer",
+                "search": "Search for Pharmacustomer"
+            },
+            "created": "A new Pharmacustomer is created with identifier {{ param }}",
+            "updated": "A Pharmacustomer is updated with identifier {{ param }}",
+            "deleted": "A Pharmacustomer is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Pharmacustomer {{ id }}?"
+            },
+            "detail": {
+                "title": "Pharmacustomer"
+            },
+            "pharmacustomernr": "Pharmacustomernr",
+            "address": "Address",
+            "city": "City",
+            "state": "State",
+            "zipcode": "Zipcode",
+            "country": "Country",
+            "pharmashipto": "Pharmashipto",
+            "pharmabillto": "Pharmabillto",
+            "dealicensenr": "Dealicensenr"
+        }
+    }
+}
