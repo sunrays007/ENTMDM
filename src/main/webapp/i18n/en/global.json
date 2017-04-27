@@ -122,5 +122,5 @@
         "emailexists": "Email is already in use!",
         "idexists": "A new {{ entityName }} cannot already have an ID"
     },
-    "footer": "This is your footer"
+    "footer": "If you have any questions on this Enterprise MDM Demo App, please reach me at <b> Kiran.Karnati@cardinalhealth.com"
 }

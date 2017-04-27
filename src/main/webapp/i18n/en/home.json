@@ -1,11 +1,13 @@
 {
     "home": {
-        "title": "Welcome, Java Hipster!",
+        "title": "Enterprise MDM Demo - From Kiran!",
         "subtitle": "This is your homepage",
         "logged": {
             "message": "You are logged in as user \"{{username}}\"."
         },
-        "question": "If you have any question on JHipster:",
+        "mdminformation": "<b> Master Data </b> is the critical information about business entities and concepts such as customers, suppliers, employees, patients, products, materials, stores, plants, recipes and so on. It is the foundational information used throughout an organization and make key business decisions. <br/> <br/> <b> Master Data Management ( MDM ) </b> is the set of technologies and processes which allow business and technology users manage, govern and analyze this critical information across the enterprise.",
+        "demoinformation": "<b> This app </b> demonstrates Pharma and Medical segments within Cardinal Health author duplicate customer master data due to their segment specific view and Enterprise Master Data Stewards de-duplicating the segment specific records into a unified golden customer record, that is ready for consumption by the down stream systems.",
+        "question": "If you have any questions on this Enterprise MDM Demo App, please feel free to reach me at Kiran.Karnati@cardinalhealth.com",
         "link": {
             "homepage": "JHipster homepage",
             "stackoverflow": "JHipster on Stack Overflow",
@@ -13,7 +15,7 @@
             "chat": "JHipster public chat room",
             "follow": "follow @java_hipster on Twitter"
         },
-        "like": "If you like JHipster, don't forget to give us a star on",
-        "github": "GitHub"
+        "like": "If you like to have the source code for this app, you can download it from my",
+        "github": "<b> GitHub </b> "
     }
 }

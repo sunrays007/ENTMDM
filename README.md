@@ -1,4 +1,11 @@
 # entmdm
+
+Master Data is the critical information about business entities and concepts such as customers, suppliers, employees, patients, products, materials, stores, plants, recipes and so on. It is the foundational information used throughout an organization and make key business decisions. 
+
+Master Data Management ( MDM ) is the set of technologies and processes which allow business and technology users manage, govern and analyze this critical information across the enterprise.
+
+This app demonstrates Pharma and Medical segments within Cardinal Health author duplicate customer master data due to their segment specific view and Enterprise Master Data Stewards de-duplicating the segment specific records into a unified golden customer record, that is ready for consumption by the down stream systems.
+
 This application was generated using JHipster 4.3.0, you can find documentation and help at [https://jhipster.github.io/documentation-archive/v4.3.0](https://jhipster.github.io/documentation-archive/v4.3.0).
 
 ## Development
