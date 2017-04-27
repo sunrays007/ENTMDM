@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span data-translate="entmdmApp.medicalcustomer.detail.title">Medicalcustomer</span> {{vm.medicalcustomer.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="entmdmApp.medicalcustomer.medcustomernr">Medcustomernr</span></dt>
+        <dd>
+            <span>{{vm.medicalcustomer.medcustomernr}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.medicalcustomer.address">Address</span></dt>
+        <dd>
+            <span>{{vm.medicalcustomer.address}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.medicalcustomer.city">City</span></dt>
+        <dd>
+            <span>{{vm.medicalcustomer.city}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.medicalcustomer.state">State</span></dt>
+        <dd>
+            <span>{{vm.medicalcustomer.state}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.medicalcustomer.zipcode">Zipcode</span></dt>
+        <dd>
+            <span>{{vm.medicalcustomer.zipcode}}</span>
+        </dd>
+        <dt><span data-translate="entmdmApp.medicalcustomer.country">Country</span></dt>
+        <dd>
+            <span>{{vm.medicalcustomer.country}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="medicalcustomer-detail.edit({id:vm.medicalcustomer.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

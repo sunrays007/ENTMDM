@@ -8,6 +8,7 @@
             "entities": {
                 "main": "Entities",
                 "pharmacustomer": "Pharmacustomer",
+                "medicalcustomer": "Medicalcustomer",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

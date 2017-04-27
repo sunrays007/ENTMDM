@@ -1,0 +1,86 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myMedicalcustomerLabel" data-translate="entmdmApp.medicalcustomer.home.createOrEditLabel">Create or edit a Medicalcustomer</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.medicalcustomer.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.medicalcustomer.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.medicalcustomer.medcustomernr" for="field_medcustomernr">Medcustomernr</label>
+            <input type="text" class="form-control" name="medcustomernr" id="field_medcustomernr"
+                    ng-model="vm.medicalcustomer.medcustomernr"
+                    required ng-maxlength="10"/>
+            <div ng-show="editForm.medcustomernr.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.medcustomernr.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.medcustomernr.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="10">
+                    This field cannot be longer than 10 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.medicalcustomer.address" for="field_address">Address</label>
+            <input type="text" class="form-control" name="address" id="field_address"
+                    ng-model="vm.medicalcustomer.address"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.medicalcustomer.city" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                    ng-model="vm.medicalcustomer.city"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.medicalcustomer.state" for="field_state">State</label>
+            <input type="text" class="form-control" name="state" id="field_state"
+                    ng-model="vm.medicalcustomer.state"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.medicalcustomer.zipcode" for="field_zipcode">Zipcode</label>
+            <input type="number" class="form-control" name="zipcode" id="field_zipcode"
+                    ng-model="vm.medicalcustomer.zipcode"
+                    required max="99999"/>
+            <div ng-show="editForm.zipcode.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.zipcode.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.zipcode.$error.max" data-translate="entity.validation.max" translate-value-max="99999">
+                    This field cannot be more than 99999.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.zipcode.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="entmdmApp.medicalcustomer.country" for="field_country">Country</label>
+            <input type="text" class="form-control" name="country" id="field_country"
+                    ng-model="vm.medicalcustomer.country"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,27 @@
+{
+    "entmdmApp": {
+        "medicalcustomer" : {
+            "home": {
+                "title": "Medicalcustomers",
+                "createLabel": "Create a new Medicalcustomer",
+                "createOrEditLabel": "Create or edit a Medicalcustomer",
+                "search": "Search for Medicalcustomer"
+            },
+            "created": "A new Medicalcustomer is created with identifier {{ param }}",
+            "updated": "A Medicalcustomer is updated with identifier {{ param }}",
+            "deleted": "A Medicalcustomer is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Medicalcustomer {{ id }}?"
+            },
+            "detail": {
+                "title": "Medicalcustomer"
+            },
+            "medcustomernr": "Medcustomernr",
+            "address": "Address",
+            "city": "City",
+            "state": "State",
+            "zipcode": "Zipcode",
+            "country": "Country"
+        }
+    }
+}
