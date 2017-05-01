@@ -81,15 +81,15 @@
             <label class="control-label" data-translate="entmdmApp.pharmacustomer.zipcode" for="field_zipcode">Zipcode</label>
             <input type="number" class="form-control" name="zipcode" id="field_zipcode"
                     ng-model="vm.pharmacustomer.zipcode"
-                    required max="5"/>
+                    required max="99999"/>
             <div ng-show="editForm.zipcode.$invalid">
                 <p class="help-block"
                     ng-show="editForm.zipcode.$error.required" data-translate="entity.validation.required">
                     This field is required.
                 </p>
                 <p class="help-block"
-                    ng-show="editForm.zipcode.$error.max" data-translate="entity.validation.max" translate-value-max="5">
-                    This field cannot be more than 5.
+                    ng-show="editForm.zipcode.$error.max" data-translate="entity.validation.max" translate-value-max="99999">
+                    This field cannot be more than 99999.
                 </p>
                 <p class="help-block"
                     ng-show="editForm.zipcode.$error.number" data-translate="entity.validation.number">

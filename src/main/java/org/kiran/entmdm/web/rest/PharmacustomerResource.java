@@ -38,7 +38,7 @@ public class PharmacustomerResource {
     private final Logger log = LoggerFactory.getLogger(PharmacustomerResource.class);
 
     private static final String ENTITY_NAME = "pharmacustomer";
-        
+
     private final PharmacustomerRepository pharmacustomerRepository;
 
     private final PharmacustomerSearchRepository pharmacustomerSearchRepository;
@@ -62,6 +62,9 @@ public class PharmacustomerResource {
         if (pharmacustomer.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert(ENTITY_NAME, "idexists", "A new pharmacustomer cannot already have an ID")).body(null);
         }
+
+      //  pharmacustomer.setZipcode(4);
+
         Pharmacustomer result = pharmacustomerRepository.save(pharmacustomer);
         pharmacustomerSearchRepository.save(result);
         return ResponseEntity.created(new URI("/api/pharmacustomers/" + result.getId()))
@@ -85,6 +88,7 @@ public class PharmacustomerResource {
         if (pharmacustomer.getId() == null) {
             return createPharmacustomer(pharmacustomer);
         }
+       // pharmacustomer.setZipcode(4);
         Pharmacustomer result = pharmacustomerRepository.save(pharmacustomer);
         pharmacustomerSearchRepository.save(result);
         return ResponseEntity.ok()
@@ -140,7 +144,7 @@ public class PharmacustomerResource {
      * SEARCH  /_search/pharmacustomers?query=:query : search for the pharmacustomer corresponding
      * to the query.
      *
-     * @param query the query of the pharmacustomer search 
+     * @param query the query of the pharmacustomer search
      * @param pageable the pagination information
      * @return the result of the search
      */

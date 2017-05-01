@@ -45,7 +45,7 @@ public class Pharmacustomer implements Serializable {
     private String state;
 
     @NotNull
-    @Max(value = 5)
+    @Max(value = 99999)
     @Column(name = "zipcode", nullable = false)
     private Integer zipcode;
 
